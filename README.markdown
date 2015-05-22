@@ -28,25 +28,15 @@ See example directory and DDoc comments.
 
 ## Mustache.Option
 
-* ext(string)
-
-File extenstion of Mustache template. Default is "mustache".
-
-* path(string)
-
-root path to read Mustache template. Default is "."(current directory).
-
-* level(CacheLevel)
-
-Cache level for Mustache's in-memory cache. Default is "check". See DDoc.
-
-* handler(String delegate())
-
-Callback delegate for unknown name. handler is called if Context can't find name. Image code is below.
-
-    if (followable context is nothing)
-        return handler is null ? null : handler();
-
+Option                       | Description
+-----------------------------|----------------------------------------------------------
+`ext(string)`                | File extenstion of Mustache template. Default is "mustache".
+`path(string)`               | Root path to read Mustache template. Default is "."(current directory).
+`level(CacheLevel)`          | Cache level for Mustache's in-memory cache. Default is "check". See DDoc.
+`handler(String delegate())` | Callback delegate for unknown name. handler is called if Context can't find name. Image code is below.
+							 | `if (followable context is nothing) return handler is null ? null : handler();`
+							   
+							   	
 # TODO
 
 Working on CTFE.
